@@ -50,6 +50,12 @@ form div button {
     padding: 10px 30px;
     font-size: 18px;
 }
+form ul {
+    list-style: none;
+}
+form ul li {
+    color: red;
+}
 .no-acc-register {
     text-align: center;
     margin-top: 50px;
