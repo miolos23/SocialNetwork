@@ -52,3 +52,19 @@ document.querySelector('#deleteProfile').addEventListener('click', e => {
         user.delete();
     }
 });
+
+document.querySelector("#postForm").addEventListener('submit', e => {
+    e.preventDefault();
+
+    async function createPost() {
+        let content = document.querySelector('#postContent').value;
+        document.querySelector('#postContent').value = '';
+        
+        let post = new Post();
+        post.post_content = content;
+        post = await post.create();
+
+        console.log(post);
+    }
+    createPost();
+});
